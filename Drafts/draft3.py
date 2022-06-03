@@ -155,17 +155,3 @@ def format_number(number):
         res+=","
     return res
 
-
-movies = {
-    "Toy Story" : {"Rotten Tomatoes": 100, "IMDb": 8.3, "Rating": "G"},
-    "Finding Nemo" : {"Rotten Tomatoes": 99, "IMDb": 8.1, "Rating": "G"},
-    "Coraline" : {"Rotten Tomatoes": 90, "IMDb": 7.7, "Rating": "PG"},
-    "Coco": {"Rotten Tomatoes": 97, "IMDb": 8.4, "Rating": "PG"} 
-    }
-
-imdb_list = []
-
-for member in movies:
-    imdb_list.append(movies[member]["IMDb"])
-
-print(imdb_list)
