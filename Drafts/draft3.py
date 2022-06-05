@@ -155,3 +155,24 @@ def format_number(number):
         res+=","
     return res
 
+
+def find_avg(lst):
+    total = 0
+    count = 0
+    for i in range(len(lst)):
+        for j in range(len(lst[i])):
+            if lst[i][j] % 3 == 0:
+                total += lst[i][j]
+                count += 1
+    return total/count
+
+test = find_avg([[15,3,5],[4,5,6]])
+
+#assert test == 8,f'Expected: 8 but got {test}' 
+
+img = [
+    [(0, 15, 0), (56, 44, 254), (255, 255, 50)],
+    [(64, 128, 255), (0, 0, 0), (100, 75, 168)],
+    [(41,10,15),(89,89,89),(147,155,155)]
+    ]
+
