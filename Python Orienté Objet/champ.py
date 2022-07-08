@@ -8,7 +8,8 @@ class Summoner:
         self.weapon = weapon
         print("Bienvenue au joueur ", self.pseudo ," | health: ", self.health, " | attaque: ", self.attack)
 
-    #Methode
+    #Getters
+    
     def get_pseudo(self):
         return self.pseudo
 
@@ -20,13 +21,17 @@ class Summoner:
 
     def get_weapon(self):
         return self.weapon
+    
+    #Setters
+
+    def set_weapon(self,weapon):
+        self.weapon = weapon
+
+    #Methode
 
     def damage(self, damage):
         self.health -= damage
         print("Aie...vous venez de subir ", damage, "degats")
-    
-    def set_weapon(self,weapon):
-        self.weapon = weapon
 
     def attack_player(self, target_player):
         target_player.damage(self.get_attack())

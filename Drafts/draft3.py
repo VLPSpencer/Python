@@ -67,6 +67,8 @@ def longest_word_index(lst_of_words):
 import random
 from turtle import clear
 
+from scipy import rand
+
 """list_length =  input("What's the length of your list? ")
 list_of_floats = []
 for i in range(int(list_length)):
@@ -168,4 +170,54 @@ def find_avg(lst):
 
 test = find_avg([[15,3,5],[4,5,6]])
 
-print(test)
+def pyramid_straight(height):
+    i = 0
+    j = height
+    stars = 1
+    while(i<height):
+        print(" " * int(height-i-1) + "*" * stars)
+        stars+=2
+        i+=1
+
+def pyramid_reverse(height):
+    i = 0
+    j = height
+    stars = height*2-1
+    while(i<j):
+        print(" "*i + "*"*stars)
+        stars=stars-2
+        i+=1
+
+def diamond(size):
+    pyramid_straight(size)
+    pyramid_reverse(size)
+
+def form(size):
+    space = size
+    news = 0
+    for i in range(size):
+        print("")
+        print(" "*space*2, end=' ')
+        for j in range(size):
+            print("*", end=' ')
+        if(news<size):
+            print(" *"*news, end=' ')
+            news+=1
+        space-=1
+
+def square(size):
+    stars = size
+    regular = size
+    for i in range(size):
+        print("")
+        while(stars>0):
+            for j in range(size):
+                print("*"*regular*2,end=' ')
+                print(" *"*stars,end=' ')
+                stars-=1
+                print("")
+    
+
+form(10)
+square(10)
+
