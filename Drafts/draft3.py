@@ -220,4 +220,4 @@ def square(size):
 
 form(10)
 square(10)
-
+diamond(5)
